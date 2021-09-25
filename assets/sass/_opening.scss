@@ -1,0 +1,76 @@
+#skyline{
+    .skyline-title{
+        position:absolute;
+        top:50%;
+        transform: translateY(-50%);
+        width: 100%;
+        p{
+            font-family:six-caps;
+            color:white;
+            letter-spacing:2rem;
+            margin:3rem;
+        }
+        .the{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2vw;
+            font-family:abel;
+            animation-name:animThe;
+            animation-delay:0s;
+            animation-duration:1s;
+            animation-timing-function:ease-in;
+        }
+        .skyline{
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            span{
+                color:white;
+                margin:10px;
+                font-size: 6rem;
+                animation-name:animSpan;
+                animation-delay:0s;
+                animation-duration:1s;
+                animation-timing-function:ease-out;
+                margin: 0 auto;
+            }
+            .line{
+                width:76vw;
+                height:10px;
+                background: crimson;
+                border-radius: 9999px;
+                margin:0 auto;
+                position:absolute;
+                z-index:10;
+                animation-name:animLine;
+                animation-delay:0s;
+                animation-duration: 2s;
+                animation-timing-function:ease-in;
+            }
+            span:nth-child(odd){
+                z-index:11;
+            }
+            span:nth-child(even){
+                z-index: 9;
+            }
+        }
+        
+    }
+}
+@keyframes animLine {
+    0%{
+        width: 0vw;
+    }
+    100%{
+        width: 76vw;
+    }
+}
+@keyframes animThe{
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
